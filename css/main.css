@@ -1,0 +1,225 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de header */
+header {
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 5px 4px 10px rgb(227, 227, 26);
+    transition: 2s;
+}
+
+header img {
+    padding-top: 0.3rem;
+    height: 92%;
+    }
+header nav {
+    align-self: flex-end
+}
+.homeButton{
+    display: none;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-content: end;
+    gap: 1.3rem;
+}
+
+header nav ul a{
+    color: white;
+    text-decoration: none;
+}
+header nav ul li{
+    transition: 1.5s
+
+}
+header nav ul li:hover{
+    scale: 1.4;
+    transition: 1.5s;
+    border-bottom: 2.5px solid yellow;
+}
+
+/* Estilos de main en Index*/
+.tituloIndex{
+    text-align: center;
+    font-size: 28px;
+
+}
+
+/* Estilos de main en Productos*/
+.imgProductos{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.iPhone12 {
+    object-fit: cover;
+}
+
+.mainProductos{
+    margin: 1rem 3rem 2rem 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(6, 16%);
+}
+
+.detalles {
+    align-self: center;
+
+}
+
+.detallesDet {
+    font-size: small;
+}
+
+.tituloProductos{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+
+/* Estilo de main servicios */
+.tituloServicios{
+    text-align: center;
+    margin-top: 1rem;
+    
+}
+.parrafoServicios{
+    margin: 1.5rem;
+}
+    .tituloLista{
+        font-size: 20px;
+    margin: 1rem;
+    
+    text-decoration: underline;
+}
+.listaServicios{
+    padding: 0.2rem;
+
+}
+/* Estilo de main de contacto */ 
+
+.mainContacto{
+    margin: 0.7rem;
+    gap: 0.7rem;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+.formContacto{
+    width: 80%;
+    
+}
+
+.parrafosContacto{
+    display: none;
+    margin-top: 1rem;
+    width: 40%;
+}
+
+.pContacto{
+    font-size: 17px;
+}
+
+/* Estilos de main Sucursales */
+.mainSucursales{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.tituloSucursales{
+    font-size: 26px;
+}
+.sucursalSur,.sucursalCentro{
+    margin-top: 2rem;
+}
+
+
+/* Estilos de footer */
+footer img {
+    height: 46px;
+    width: 46px;
+}
+
+footer {
+    box-shadow: 0px -8px 15px rgb(227, 227, 26);  
+    background-color: black;
+    margin-top: 2rem;
+    padding: 1rem 0.5rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.seguinos,.derechos {
+    grid-column: span 1;
+    grid-row: span 1;
+    color: white;
+
+}
+
+.redes {
+    grid-column: span 1;
+    grid-row: span 2;
+    justify-self: center;
+
+}
+
+
+/* MQ +577px */
+@media screen and (min-width:577px) {
+    header{
+        height: 15vh;
+    }
+    header nav ul {
+        gap: 1.8rem;
+        font-size: 18px;
+    }
+
+    .mainProductos{
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: repeat(3, 30%);
+
+    }
+}
+
+/* MQ +768px */
+@media screen and (min-width:768px) {
+    .homeButton {
+        display: inline-flex;
+    }
+    .formContacto{
+        width: 40%;
+        
+    }
+    
+    .parrafosContacto{
+        display: block;
+        margin-top: 1rem;
+        width: 40%;
+    
+    }
+}
+
+/* MQ +992px */
+@media screen and (min-width:992px) {
+    header nav ul {
+        gap: 2.2rem;
+        font-size: 20px;
+    }
+
+    .mainProductos{
+        grid-template-columns: repeat(6, 16%);
+        grid-template-rows: repeat(2, 50%);
+    }
+
+}
