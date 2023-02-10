@@ -6,13 +6,17 @@
 }
 
 /* Estilos de header */
+.divLogo{
+    margin-left: 1.3rem;
+}
 header {
-    height: 10vh;
+    height: 15vh;
+    font-family: 'Inconsolata', monospace;
     background-color: black;
     display: flex;
     justify-content: space-around;
     box-shadow: 5px 4px 10px rgb(227, 227, 26);
-    transition: 2s;
+    
 }
 
 header img {
@@ -36,15 +40,7 @@ header nav ul a{
     color: white;
     text-decoration: none;
 }
-header nav ul li{
-    transition: 0.5s
 
-}
-header nav ul li:hover{
-    text-shadow: 1px 1px yellow;
-    transition: 0.5s;
-    border-bottom: 2.5px solid yellow;
-}
 
 /* Estilos de main en Index*/
 .mainIndex{
@@ -117,11 +113,14 @@ header nav ul li:hover{
     display: flex;
     flex-wrap: wrap;
 }
+
 .formContacto{
     width: 80%;
-    
 }
 
+.labelsForm,.tituloContacto{
+    margin-top: 0.7rem;
+}
 .parrafosContacto{
     display: none;
     margin-top: 1rem;
@@ -153,6 +152,7 @@ footer img {
 }
 
 footer {
+    font-family: 'Raleway', sans-serif;
     width: 100%;
     position: relative;
     top: 1rem;
@@ -182,13 +182,12 @@ footer {
 
 /* MQ +577px */
 @media screen and (min-width:577px) {
-    header{
-        height: 15vh;
-    }
+
     header nav ul {
         gap: 1.8rem;
         font-size: 18px;
     }
+
 
     .mainProductos{
         grid-template-columns: repeat(4, 25%);
@@ -199,6 +198,15 @@ footer {
 
 /* MQ +768px */
 @media screen and (min-width:768px) {
+    header nav ul li{
+        transition: 0.5s
+    
+    }
+    header nav ul li:hover{
+        text-shadow: 0.5px 0.5px yellow;
+        transition: 0.5s;
+        border-bottom: 2.5px solid yellow;
+    }
     .homeButton {
         display: inline-flex;
     }
